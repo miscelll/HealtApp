@@ -11,6 +11,8 @@ import java.util.List;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
@@ -26,6 +28,34 @@ public class AudioController {
     @FXML
     private Button conversion;
 
+    @FXML
+    private Button back;
+
+    private Parent fxml;
+    @FXML
+    void Back() {
+
+    	
+    	
+    	AnchorPane.getScene().getWindow().hide();
+		Stage conversion= new Stage();
+		
+			
+		try {
+		
+		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home3.fxml"));
+		
+		Scene scene = new Scene(fxml);
+		
+		conversion.setScene(scene);
+		conversion.show();
+		
+    }catch(IOException e){
+		
+	}
+	
+    }
+   
   
     @FXML
     void Open() {
@@ -74,7 +104,7 @@ public class AudioController {
 			
 				Thread.sleep(3000);
 				p.destroy();
-				System.exit(0);
+				
 			} catch (IOException | InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -8,7 +8,7 @@
    <children>
       <AnchorPane fx:id="anchorPane2" layoutY="286.0" prefHeight="215.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="blue-btn">
          <children>
-            <Button fx:id="profile" layoutX="64.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#OpenProfile" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Profile" textFill="#7b7272">
+            <Button fx:id="profile" layoutX="64.0" layoutY="83.0" mnemonicParsing="false" onAction="#OpenProfile" onMouseClicked="#OpenProfile" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Profile" textFill="#7b7272">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
@@ -18,7 +18,7 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="blog" layoutX="520.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#OpenBlog" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Blog" textFill="#7b7272">
+            <Button fx:id="blog" layoutX="520.0" layoutY="83.0" mnemonicParsing="false" onAction="#OpenBlog" onMouseClicked="#OpenBlog" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Blog" textFill="#7b7272">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>

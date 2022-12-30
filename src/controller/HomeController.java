@@ -50,7 +50,7 @@ public class HomeController implements Initializable{
 		
 			
 		try {
-		System.out.println("Conversione2");
+		
 		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Conversion.fxml"));
 		
 		Scene scene = new Scene(fxml);
@@ -70,13 +70,55 @@ public class HomeController implements Initializable{
     }
 
     @FXML
-    void OpenBlog(MouseEvent event) {
+    void OpenBlog() {
+	System.out.println("Blog");
+    	
+		
+		anchorPane2.getScene().getWindow().hide();
+		Stage conversion= new Stage();
+		
+			
+	
+	
+		try {
+			fxml= FXMLLoader.load(getClass().getResource("/interfaces/Blog.fxml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Scene scene = new Scene(fxml);
+		
+		conversion.setScene(scene);
+		conversion.show();
+		
+	
+	
 
     }
 
     @FXML
-    void OpenProfile(MouseEvent event) {
-
+    void OpenProfile() {
+	System.out.println("Profile");
+    	
+		
+		anchorPane2.getScene().getWindow().hide();
+		Stage conversion= new Stage();
+		
+			
+		try {
+		
+		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Profile.fxml"));
+		
+		Scene scene = new Scene(fxml);
+		
+		conversion.setScene(scene);
+		conversion.show();
+		
+    }catch(IOException e){
+		
+	}
+	
     }
 
 	@Override

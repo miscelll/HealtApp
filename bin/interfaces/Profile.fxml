@@ -6,15 +6,7 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: sky;" styleClass="white-pane-nophoto" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AudioController">
    <children>
-      <AnchorPane fx:id="AnchorPane" layoutY="286.0" prefHeight="215.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="blue-btn">
-         <children>
-            <Button fx:id="conversion" layoutX="293.0" layoutY="83.0" mnemonicParsing="false" onAction="#Open" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Conversion" textFill="#7b7272">
-               <font>
-                  <Font name="System Italic" size="12.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="AnchorPane" layoutY="286.0" prefHeight="215.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="blue-btn" />
       <Button fx:id="back" layoutX="20.0" layoutY="27.0" mnemonicParsing="false" onAction="#Back" prefHeight="22.0" prefWidth="52.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Back" textFill="#7b7272">
          <font>
             <Font name="System Italic" size="12.0" />
