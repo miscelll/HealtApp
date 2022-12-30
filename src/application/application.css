@@ -1,0 +1,54 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.parent{
+	-fx-background-color: transparent ;
+}
+.pane{
+	-fx-background-color: #33698F;
+}
+
+.trans-btn-white-border{
+	-fx-background-color: transparent ;
+	-fx-background-radius: 5px;
+	-fx-border-color: #cccccc;
+	-fx-border-radius: 5px;
+	-fx-border-width: 1px;
+	-fx-text-fill: whitesmoke ;
+}
+
+.white-pane{
+	-fx-background-image: url("/images/Cattura.JPG");
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-size: 200 200;
+	
+	
+	-fx-background-position: center center;
+	-fx-background-color: #FFFFFF;
+}
+.white-pane-nophoto{
+	-fx-background-image: url("/images/digit.jpg");
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-size:350 250;
+	-fx-background-position: center top;
+	-fx-background-color: #FFFFFF;
+}
+
+.tf_box{
+	-fx-background-color: transparent ;
+	-fx-border-color: #DEDEE4;
+	-fx-border-width: 0px 0px 1px 0px;
+}
+.tf{
+	-fx-background-color: transparent ;
+	-fx-prompt-text-fill: #2C2C2C;
+}
+.pink-btn{
+	-fx-background-color: #C5304D;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #FFFFFF;
+}
+.blue-btn{
+	-fx-background-color: #316dc4;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #FFFFFF;
+}

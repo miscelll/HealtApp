@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/bin"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/fontawesomefx-8.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/fontawesomefx-8.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/itextpdf-5.4.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/itextpdf-5.4.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/jfoenix-8.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michelle/Downloads/jar files/mail-5.1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
