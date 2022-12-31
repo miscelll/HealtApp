@@ -93,7 +93,9 @@ public class AudioController {
 
 
 
-    	    ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\Green.py", path).inheritIO();
+    	  //  ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\Green.py", path).inheritIO();
+    	    ProcessBuilder builder = new ProcessBuilder("python","python\\Green.py", path).inheritIO();
+    	    
     	    try {
 				Process p=builder.start();
 				p.waitFor();
