@@ -61,10 +61,10 @@ public class AudioController {
     void Open() {
     	
     	FileChooser fileChooser = new FileChooser();
-
+     	
     	//Extention filter
-    	//FileChooser.ExtensionFilter extentionFilter = new FileChooser.ExtensionFilter("CSV files (*.csv)", "*.csv");
-    	//fileChooser.getExtensionFilters().add(extentionFilter);
+    	FileChooser.ExtensionFilter extentionFilter = new FileChooser.ExtensionFilter("wav file", "*.wav");
+    	fileChooser.getExtensionFilters().add(extentionFilter);
 
     	//Set to user directory or go to default if cannot access
     	//String userDirectoryString = System.getProperty("user.home");
@@ -73,6 +73,7 @@ public class AudioController {
     	   File userDirectory = new File("C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\notesMusiques");
     	//}
     	fileChooser.setInitialDirectory(userDirectory);
+   
 
     	//Choose the file
     	File chosenFile = fileChooser.showOpenDialog(null);

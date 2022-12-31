@@ -27,11 +27,6 @@
 			<locationURI>PARENT-2-PROJECT_LOC/Desktop/progetto%20SAD/SpectrogramGenerator-main/pythonExample/Green.py</locationURI>
 		</link>
 		<link>
-			<name>src/images/2.JPG</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/2.JPG</locationURI>
-		</link>
-		<link>
 			<name>src/images/Cattura.JPG</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/Cattura.JPG</locationURI>
