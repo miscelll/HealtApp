@@ -70,7 +70,8 @@ public class AudioController {
     	//String userDirectoryString = System.getProperty("user.home");
     	//File userDirectory = new File(userDirectoryString);
     	//if(!userDirectory.canRead()) {
-    	   File userDirectory = new File("C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\notesMusiques");
+    	 //  File userDirectory = new File("C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\notesMusiques");
+    	 File userDirectory = new File("audio");
     	//}
     	fileChooser.setInitialDirectory(userDirectory);
    
