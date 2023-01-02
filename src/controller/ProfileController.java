@@ -22,7 +22,7 @@ import javafx.fxml.FXMLLoader;
 public class ProfileController implements Initializable{
 
 	 @FXML
-	    private AnchorPane AnchorPane;
+	 private AnchorPane AnchorPane;
 
 @FXML
 private Button back;

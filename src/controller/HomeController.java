@@ -12,8 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
+import javafx.stage.StageStyle;
 import javafx.fxml.FXMLLoader;
 
 
@@ -37,7 +38,46 @@ public class HomeController implements Initializable{
     @FXML
     private Button profile;
 
-   
+    @FXML
+    private Button logOut;
+    
+    
+
+    @FXML
+    void LogOut() {
+
+    	
+		
+		anchorPane.getScene().getWindow().hide();
+		Stage conversion= new Stage();
+		
+			
+		try {
+		
+		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Main.fxml"));
+		
+	
+		Scene scene = new Scene(fxml);
+		
+		scene.setFill(Color.TRANSPARENT);
+		conversion.setScene(scene);
+	
+		conversion.initStyle(StageStyle.TRANSPARENT);
+		
+		conversion.show();
+		
+		
+	
+		}
+		catch(IOException e){
+			
+		}
+		catch( IllegalStateException p) {
+			
+		}
+    }
+
+    
     
     @FXML
     void DoConversion() {
