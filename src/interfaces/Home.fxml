@@ -6,7 +6,7 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: sky;" styleClass="white-pane-nophoto" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
    <children>
-      <AnchorPane fx:id="anchorPane2" layoutY="286.0" prefHeight="215.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="blue-btn">
+      <AnchorPane fx:id="anchorPane" layoutY="286.0" prefHeight="215.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="blue-btn">
          <children>
             <Button fx:id="profile" layoutX="64.0" layoutY="83.0" mnemonicParsing="false" onAction="#OpenProfile" onMouseClicked="#OpenProfile" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Profile" textFill="#7b7272">
                <font>

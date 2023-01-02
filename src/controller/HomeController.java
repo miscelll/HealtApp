@@ -23,10 +23,10 @@ public class HomeController implements Initializable{
 
     private Parent fxml;
 
+   // @FXML
+    //private AnchorPane anchorPane;
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    private AnchorPane anchorPane2;
 
     @FXML
     private Button blog;
@@ -45,7 +45,7 @@ public class HomeController implements Initializable{
     	System.out.println("Conversione");
     	
 		
-		anchorPane2.getScene().getWindow().hide();
+		anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
 		
 			
@@ -74,7 +74,7 @@ public class HomeController implements Initializable{
 	System.out.println("Blog");
     	
 		
-		anchorPane2.getScene().getWindow().hide();
+		anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
 		
 			
@@ -102,7 +102,7 @@ public class HomeController implements Initializable{
 	System.out.println("Profile");
     	
 		
-		anchorPane2.getScene().getWindow().hide();
+		anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
 		
 			

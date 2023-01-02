@@ -76,7 +76,7 @@ public class SignInController2 implements Initializable {
 	  
 	    			try {
 	    		
-	    				fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home3.fxml"));
+	    				fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
 	    				Scene scene = new Scene(fxml);
 	    				home.setScene(scene);
 	    				home.show();

@@ -39,7 +39,7 @@ void Back() {
 		
 	try {
 	
-	fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home3.fxml"));
+	fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
 	
 	Scene scene = new Scene(fxml);
 	
