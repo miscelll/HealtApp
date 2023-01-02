@@ -36,7 +36,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="3.0" prefWidth="212.0">
          <children>
-            <Button fx:id="btn_pass" mnemonicParsing="false" onAction="#setPass" prefHeight="25.0" prefWidth="129.0" styleClass="parent" stylesheets="@../../bin/application/application.css" text="Forgot password?" HBox.hgrow="ALWAYS">
+            <Button fx:id="btn_pass" mnemonicParsing="false" onAction="#setPass" prefHeight="25.0" prefWidth="129.0" styleClass="parent" stylesheets="@../../bin/application/application.css" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
