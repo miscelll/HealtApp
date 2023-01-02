@@ -18,7 +18,7 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="blog" layoutX="520.0" layoutY="83.0" mnemonicParsing="false" onAction="#OpenBlog" onMouseClicked="#OpenBlog" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Blog" textFill="#7b7272">
+            <Button fx:id="contacts" layoutX="520.0" layoutY="83.0" mnemonicParsing="false" onAction="#OpenContacts" prefHeight="31.0" prefWidth="113.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Contacts" textFill="#7b7272">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>

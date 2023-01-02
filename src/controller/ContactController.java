@@ -19,7 +19,7 @@ import javafx.fxml.FXMLLoader;
 
 
 
-public class BlogController implements Initializable{
+public class ContactController implements Initializable{
 
 	 @FXML
 	    private AnchorPane AnchorPane;

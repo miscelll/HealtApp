@@ -29,7 +29,7 @@ public class HomeController implements Initializable{
     private AnchorPane anchorPane;
 
     @FXML
-    private Button blog;
+    private Button contacts;
 
     @FXML
     private Button conversion;
@@ -70,8 +70,8 @@ public class HomeController implements Initializable{
     }
 
     @FXML
-    void OpenBlog() {
-	System.out.println("Blog");
+    void OpenContacts() {
+	
     	
 		
 		anchorPane.getScene().getWindow().hide();
@@ -81,7 +81,7 @@ public class HomeController implements Initializable{
 	
 	
 		try {
-			fxml= FXMLLoader.load(getClass().getResource("/interfaces/Blog.fxml"));
+			fxml= FXMLLoader.load(getClass().getResource("/interfaces/Contact.fxml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
