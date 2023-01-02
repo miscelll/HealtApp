@@ -17,7 +17,7 @@
 }
 
 .white-pane{
-	-fx-background-image: url("/images/Cattura.JPG");
+	-fx-background-image: url("/images/cuore.JPG");
 	-fx-background-repeat: no-repeat, no-repeat;
 	-fx-background-size: 200 200;
 	
@@ -31,6 +31,14 @@
 	-fx-background-size:350 250;
 	-fx-background-position: center top;
 	-fx-background-color: #FFFFFF;
+}
+
+.skyblue-pane-photo{
+	-fx-background-image: url("/images/digit2.jpg");
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-size:350 250;
+	-fx-background-position: center top;
+	-fx-background-color: #87CEFA;
 }
 
 .tf_box{
