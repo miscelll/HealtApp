@@ -63,14 +63,18 @@ public class SignUpController implements Initializable{
     	
     	try {
     		boolean val=false;
+    		boolean nomeCheck=false;
+    		boolean mailCheck=false;
     		st= (PreparedStatement) cnx.prepareStatement(sql);
     		result= st.executeQuery();
-
+    		if(nome.equals("")) val=true;
+    		if(mail.equals("")) val=true;
     		while(result.next()) {
     			if((nome.equals(result.getString("username")))){
     	    		//Alert alert = new Alert(AlertType.ERROR," Username already used", javafx.scene.control.ButtonType.OK);
     	    		//alert.showAndWait();
-    	    		val=true;
+    	    		
+    				nomeCheck=true;
     				//VBox.getScene().getWindow().hide();
     				//Stage home= new Stage();
     			/*try {
@@ -85,14 +89,15 @@ public class SignUpController implements Initializable{
     			}*/
     			} else if(mail.equals(result.getString("email"))) {
     				//Alert alert = new Alert(AlertType.ERROR," email already used", javafx.scene.control.ButtonType.OK);
-    	    		//alert.showAndWait();
-    	    		val=true;
+    	    	
+    				//if(mail.equals("")) val=true;
+    				mailCheck=true;
     	    		fxml = FXMLLoader.load(getClass().getResource("/interfaces/SignUp.fxml"));
     			}
     		
 
 
-    		 if(result.isLast() && !val) {
+    		 if(result.isLast() && !nomeCheck && !mailCheck &&!val) {
     			 try {
     				        PreparedStatement ps = (PreparedStatement) cnx.prepareStatement(
     				            "INSERT INTO admin(username, pass, email) VALUES (?,?,?)");
@@ -130,14 +135,27 @@ public class SignUpController implements Initializable{
     				    // Your exception handling code
     				}
     		
-    		 }else if(result.isLast() && val){
-    			Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+    		 }else if(result.isLast() && nomeCheck && mailCheck && !val){
+    			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+    			 Alert alert = new Alert(AlertType.ERROR," Username and email already used", javafx.scene.control.ButtonType.OK);
  	    		alert.showAndWait();
-    		 }
+    		 } 
+    		 else if(result.isLast() && nomeCheck && !mailCheck &&!val){
+     			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+     			 Alert alert = new Alert(AlertType.ERROR," Username  already used", javafx.scene.control.ButtonType.OK);
+  	    		alert.showAndWait();
+     		 }  else if(result.isLast() && !nomeCheck && mailCheck &&!val){
+     			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+     			 Alert alert = new Alert(AlertType.ERROR," Email already used", javafx.scene.control.ButtonType.OK);
+  	    		alert.showAndWait();
+    		} else if( result.isLast() &&val) {
+    			 Alert alert = new Alert(AlertType.ERROR," Empty fields!", javafx.scene.control.ButtonType.OK);
+   	    		alert.showAndWait();
+    			
     		}
     		
-    		
-    		} catch (SQLException e) {
+    		}
+    	}catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	    			

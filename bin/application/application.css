@@ -4,7 +4,7 @@
 	-fx-background-color: transparent ;
 }
 .pane{
-	-fx-background-color: #33698F;
+	-fx-background-color: #33698F
 }
 
 .trans-btn-white-border{
@@ -17,7 +17,7 @@
 }
 
 .white-pane{
-	-fx-background-image: url("/images/cuore.JPG");
+	-fx-background-image: url("/images/mano.png");
 	-fx-background-repeat: no-repeat, no-repeat;
 	-fx-background-size: 200 200;
 	
@@ -60,3 +60,10 @@
 	-fx-background-radius: 5px;
 	-fx-text-fill: #FFFFFF;
 }
+
+.black-btn{
+	-fx-background-color: #000000;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #FFFFFF;
+}
+
