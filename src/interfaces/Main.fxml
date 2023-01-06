@@ -13,12 +13,12 @@
          <children>
             <Label layoutX="374.0" layoutY="72.0" text="Are you registered?" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Italic" size="18.0" />
                </font>
             </Label>
             <Label layoutX="28.0" layoutY="72.0" text="Are you not registered?" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Italic" size="18.0" />
                </font>
             </Label>
             <Button fx:id="SignUp" layoutX="95.0" layoutY="168.0" mnemonicParsing="false" onAction="#OpenSignUp" styleClass="trans-btn-white-border" text="Sign Up" />
