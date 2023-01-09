@@ -17,40 +17,36 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 
-
-
+//controller of Profile.fxml page
+//in the ProfileController.java file we have: back Button, one function.
 public class ProfileController implements Initializable{
 
 	 @FXML
 	 private AnchorPane AnchorPane;
 
-@FXML
-private Button back;
+	 @FXML
+	 private Button back;
 
-private Parent fxml;
+	 private Parent fxml;
+	 
+//this function is called when the back button is clicked; the user is redirected to Home page
 @FXML
 void Back() {
-
-	
-	
 	AnchorPane.getScene().getWindow().hide();
 	Stage conversion= new Stage();
-	
 		
 	try {
-	
 	fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
-	
 	Scene scene = new Scene(fxml);
-	
 	conversion.setScene(scene);
 	conversion.show();
 	
 }catch(IOException e){
 	
-}
+	}
 
 }
+//Called to initialize a controller after its root element has been completely processed.
 @Override
 public void initialize(URL location, ResourceBundle resources) {
 	// TODO Auto-generated method stub

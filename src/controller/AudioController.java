@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,6 +24,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+//controller of Audio.fxml page
+//in the AudioController.java file we have: anchorPane, conversion and back Buttons, three functions
 public class AudioController implements Initializable {
 
     @FXML
@@ -35,107 +38,61 @@ public class AudioController implements Initializable {
     private Button back;
 
     private Parent fxml;
+    
+  //this function is called when the back button is clicked; the user is redirected to Home page
     @FXML
     void Back() {
-
-    	
-    	
-    	AnchorPane.getScene().getWindow().hide();
+	AnchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
-		
-			
+	
 		try {
-		
 		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
-		
 		Scene scene = new Scene(fxml);
-		
 		conversion.setScene(scene);
 		conversion.show();
 		
-    }catch(IOException e){
-		
-	}
-	
+    }catch(IOException e){		
+		}
     }
    
-  
+  //this function is called when the conversion button is clicked; the user will choose the file to be converted
     @FXML
     void Open() {
     
     	FileChooser fileChooser = new FileChooser();
-     	
-    	//Extention filter
+     	//Filter is used to specify the type of file the user must select
     	FileChooser.ExtensionFilter extentionFilter = new FileChooser.ExtensionFilter("wav file", "*.wav");
     	fileChooser.getExtensionFilters().add(extentionFilter);
 
-    	//Set to user directory or go to default if cannot access
-    	//String userDirectoryString = System.getProperty("user.home");
-    	//File userDirectory = new File(userDirectoryString);
-    	//if(!userDirectory.canRead()) {
-    	 //  File userDirectory = new File("C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\notesMusiques");
+    	//the folder "audio" is shown to the user
     	 File userDirectory = new File("audio");
     	//}
     	fileChooser.setInitialDirectory(userDirectory);
-   
-
-    	//Choose the file
     	File chosenFile = fileChooser.showOpenDialog(null);
+    	
     	//Make sure a file was selected, if not return default
     	String path;
     	if(chosenFile != null) {
     	    path = chosenFile.getPath();
     	    System.out.println(path);
-    	    
-    	    //PROCESSING FILE
+    	 
+    	    //PROCESSING FILE: calling the python script to elaborate the signal
     	    String anyCommand="cd python";
     	    String command2 =" python Green.py";
-    	    //Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K " + anyCommand  );
-			//ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "cd python", "python Green.py");
-    	    
 
-
-
-
-    	  //  ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\Michelle\\eclipse-workspace\\HEALT_APP\\python\\Green.py", path).inheritIO();
     	    ProcessBuilder builder = new ProcessBuilder("python","python\\Green.py", path).inheritIO();
     	    
     	    try {
 				Process p=builder.start();
-				/*p.waitFor();
-				BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
-				String line = "";
-				while ((line = bfr.readLine()) != null) {
-				System.out.println(line);
-				if(p.waitFor()==1) System.out.println("elaboration is completed");
-				} */
-			
-				//Thread.sleep(3000);
-				//p.destroy();
 				
-			} catch (IOException e) /*|InterruptedException */ {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			}
-    	   /* try {
-    	    	 ProcessBuilder Process_Builder = new
-                         ProcessBuilder("python","HEALT_APP/src/Green.py")
-                         .inheritIO();
-
-    	    	 Process Demo_Process = Process_Builder.start();
-    	    	 Demo_Process.waitFor();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
-    	
+			}
+    	}
+	
     }
     
-
+  //Called to initialize a controller after its root element has been completely processed.
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub

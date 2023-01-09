@@ -17,15 +17,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.fxml.FXMLLoader;
 
-
-
+//controller of Home.fxml page
+//in the HomeController.java file we have: conversion,contacts,profile,logout Buttons, AnchorPane and five functions.
 
 public class HomeController implements Initializable{
 
     private Parent fxml;
 
-   // @FXML
-    //private AnchorPane anchorPane;
+  
     @FXML
     private AnchorPane anchorPane;
 
@@ -42,128 +41,81 @@ public class HomeController implements Initializable{
     private Button logOut;
     
     
-
+    //this function is called when the LogOut Button is clicked; the user is redirected to Main page
     @FXML
     void LogOut() {
-
-    	
-		
-		anchorPane.getScene().getWindow().hide();
+    	anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
-		
-			
-		try {
-		
-		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Main.fxml"));
-		
 	
+		try {
+		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Main.fxml"));
 		Scene scene = new Scene(fxml);
-		
 		scene.setFill(Color.TRANSPARENT);
 		conversion.setScene(scene);
-	
 		conversion.initStyle(StageStyle.TRANSPARENT);
-		
 		conversion.show();
-		
-		
-	
 		}
-		catch(IOException e){
-			
-		}
-		catch( IllegalStateException p) {
-			
-		}
+		catch(IOException e){	
+			}
+		catch( IllegalStateException p) {	
+			}
     }
 
     
-    
+    //this function is called when the Conversation Button is clicked.
     @FXML
     void DoConversion() {
-
-    	System.out.println("Conversione");
-    	
-		
 		anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
-		
 			
-		try {
-		
+		try {	
 		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Conversion.fxml"));
-		
 		Scene scene = new Scene(fxml);
-		
 		conversion.setScene(scene);
 		conversion.show();
-		
-		
-	
 		}
-		catch(IOException e){
-			
+		catch(IOException e){	
 		}
-		catch( IllegalStateException p) {
-			
+		catch( IllegalStateException p) {	
 		}
     }
 
+    //this function is called when the Contacts Button is clicked.
     @FXML
     void OpenContacts() {
-	
-    	
-		
-		anchorPane.getScene().getWindow().hide();
+    	anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
-		
-			
-	
-	
+
 		try {
 			fxml= FXMLLoader.load(getClass().getResource("/interfaces/Contact.fxml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		Scene scene = new Scene(fxml);
-		
 		conversion.setScene(scene);
 		conversion.show();
-		
-	
-	
-
     }
 
+    //this function is called when the Profile Button is clicked.
     @FXML
     void OpenProfile() {
-	System.out.println("Profile");
-    	
-		
-		anchorPane.getScene().getWindow().hide();
+    	anchorPane.getScene().getWindow().hide();
 		Stage conversion= new Stage();
-		
-			
 		try {
-		
 		fxml= FXMLLoader.load(getClass().getResource("/interfaces/Profile.fxml"));
-		
 		Scene scene = new Scene(fxml);
-		
 		conversion.setScene(scene);
 		conversion.show();
 		
-    }catch(IOException e){
-		
-	}
-	
+    }catch(IOException e){	
+    	}
     }
 
+  //Called to initialize a controller after its root element has been completely processed.
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

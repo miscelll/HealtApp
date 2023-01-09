@@ -25,8 +25,8 @@ import com.mysql.jdbc.PreparedStatement;
 import application.ConnectionMySql;
 public class SignUpController implements Initializable{
 
-	
-
+	//controller of SignUp.fxml page
+	//in the SignUpController.java file we have: iscription, btn_pass Buttons, VBox, password,email and username fields and two function.
 	Connection cnx;
 
 	public PreparedStatement st;
@@ -51,7 +51,7 @@ public class SignUpController implements Initializable{
 
     
     
-   
+ 	 // this function is called when a user try to create an account by clicking the button inscription
     @FXML
     void click()throws IOException {
     	
@@ -71,84 +71,65 @@ public class SignUpController implements Initializable{
     		if(mail.equals("")) val=true;
     		while(result.next()) {
     			if((nome.equals(result.getString("username")))){
-    	    		//Alert alert = new Alert(AlertType.ERROR," Username already used", javafx.scene.control.ButtonType.OK);
-    	    		//alert.showAndWait();
-    	    		
-    				nomeCheck=true;
-    				//VBox.getScene().getWindow().hide();
-    				//Stage home= new Stage();
-    			/*try {
-    		
-    				fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home3.fxml"));
-    				Scene scene = new Scene(fxml);
-    				home.setScene(scene);
-    				home.show();
-    		
-    			}	catch(IOException e){
-			
-    			}*/
+    	    			nomeCheck=true;
+    			
     			} else if(mail.equals(result.getString("email"))) {
-    				//Alert alert = new Alert(AlertType.ERROR," email already used", javafx.scene.control.ButtonType.OK);
-    	    	
-    				//if(mail.equals("")) val=true;
-    				mailCheck=true;
-    	    		fxml = FXMLLoader.load(getClass().getResource("/interfaces/SignUp.fxml"));
+    					mailCheck=true;
+    	    		
     			}
     		
-
-
-    		 if(result.isLast() && !nomeCheck && !mailCheck &&!val) {
+    			//if the account is not already existing, then the account is created and the information is saved into database
+    			if(result.isLast() && !nomeCheck && !mailCheck &&!val) {
     			 try {
     				        PreparedStatement ps = (PreparedStatement) cnx.prepareStatement(
     				            "INSERT INTO admin(username, pass, email) VALUES (?,?,?)");
-    				    /*
-    				     * The question marks are placeholders for the values you will insert.
-    				     */
+    				   
     				    ps.setString(1, nome);
     				    ps.setString(2, pass);
     				    ps.setString(3, mail);
     				    Alert alert = new Alert(AlertType.INFORMATION," account create successfully", javafx.scene.control.ButtonType.OK);
 	    	    		alert.showAndWait();
-	    	    		
-	    	    		
+
 	    	    		VBox.getScene().getWindow().hide();
 	    				Stage home= new Stage();
 	  
-	    			try {
-	    		
+	    				try {
+	    				//after the succesful creation of account, then the SignIn page is shown
 	    				fxml= FXMLLoader.load(getClass().getResource("/interfaces/SignIn.fxml"));
 	    				Scene scene = new Scene(fxml);
 	    				home.setScene(scene);
 	    				home.show();
 	    		
 	    		
-	    			}	catch(IOException e){
+	    					}catch(IOException e){
     			
-	    			}
+	    					}
 	    	    		
-    				   if( ps.execute()) {
-    					   System.out.println("Insert OK");
-    					   
-    					   
-    				   }; // The insert is executed here
+	    				if( ps.execute()) {
+	    					System.out.println("Insert OK"); }
     				} catch(SQLException e) {
-    				    // Your exception handling code
+    				  
     				}
     		
+    		//if the provided username and password are already used, an alert is shown
     		 }else if(result.isLast() && nomeCheck && mailCheck && !val){
-    			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
     			 Alert alert = new Alert(AlertType.ERROR," Username and email already used", javafx.scene.control.ButtonType.OK);
  	    		alert.showAndWait();
     		 } 
+    			//if the provided username is already used, an alert is shown
     		 else if(result.isLast() && nomeCheck && !mailCheck &&!val){
-     			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+     			
      			 Alert alert = new Alert(AlertType.ERROR," Username  already used", javafx.scene.control.ButtonType.OK);
   	    		alert.showAndWait();
-     		 }  else if(result.isLast() && !nomeCheck && mailCheck &&!val){
-     			//Alert alert = new Alert(AlertType.ERROR," Username and/or email already used", javafx.scene.control.ButtonType.OK);
+     		 }  
+    		//if the provided password is already used, an alert is shown
+    			else if(result.isLast() && !nomeCheck && mailCheck &&!val){
+     			
      			 Alert alert = new Alert(AlertType.ERROR," Email already used", javafx.scene.control.ButtonType.OK);
   	    		alert.showAndWait();
-    		} else if( result.isLast() &&val) {
+    		} 
+    			//if some fields are empties, an alert is shown
+    			else if( result.isLast() &&val) {
     			 Alert alert = new Alert(AlertType.ERROR," Empty fields!", javafx.scene.control.ButtonType.OK);
    	    		alert.showAndWait();
     			
@@ -156,16 +137,17 @@ public class SignUpController implements Initializable{
     		
     		}
     	}catch (SQLException e) {
-			// TODO Auto-generated catch block
+	
 			e.printStackTrace();
 		}	    			
     }
     	
    
-    
+
+	 //Called to initialize a controller after its root element has been completely processed.
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		
 		cnx= (Connection) ConnectionMySql.connexionDB();
 		
 		

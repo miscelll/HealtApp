@@ -28,7 +28,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class SignInController2 implements Initializable {
-
+	//controller of SignIn.fxml page
+	//in the SignInController2.java file we have: btn_connect, btn_pass Buttons, VBox, password and username fields and two function.
 	
 		Connection cnx;
 
@@ -54,7 +55,7 @@ public class SignInController2 implements Initializable {
 	    
 	    
 	    
-
+	    // this function is called when a user try to login  by clicking the button connect
 	    @FXML
 	    void OpenHome() throws IOException {
 	    	String nome= username.getText();
@@ -62,6 +63,7 @@ public class SignInController2 implements Initializable {
 	    	String sql="select username, pass from admin";
 	    	
 	    	try {
+	    		//here there is the construction of the query to make some controls on the account
 	    		st= (PreparedStatement) cnx.prepareStatement(sql);
 	    		result= st.executeQuery();
 	    		boolean val=false;
@@ -69,7 +71,7 @@ public class SignInController2 implements Initializable {
 	    			
 	    			if((nome.equals(result.getString("username")))&&(pass.equals(result.getString("pass")))){
 	    				
-	    				System.out.println("ACCESS OK");
+	    				//System.out.println("ACCESS OK");
 	    				VBox.getScene().getWindow().hide();
 	    				Stage home= new Stage();
 	    				val=true;
@@ -86,6 +88,7 @@ public class SignInController2 implements Initializable {
 	    			
 	    		 
 	    		}
+	    			//if the account is not registered then an alert will be shown
 	    			if(result.isLast() && !val) {
 	    			Alert alert = new Alert(AlertType.ERROR," Username or password uncorrect", javafx.scene.control.ButtonType.OK);
 		    		System.out.println(result.getString("username"));
@@ -94,13 +97,10 @@ public class SignInController2 implements Initializable {
 		    		}
 	    		}
     			
-    			
-    			 
-	   
-	    	
+
 	    		
 	    		} catch (SQLException e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}	    			
 	    }
@@ -113,9 +113,10 @@ public class SignInController2 implements Initializable {
 	
 	    
 
+	 //Called to initialize a controller after its root element has been completely processed.
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		
 		cnx= (Connection) ConnectionMySql.connexionDB();
 		
 		

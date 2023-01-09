@@ -17,8 +17,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 
-
-
+//controller of Contact.fxml page
+//in the ContactController.java file we have: back Button, two function.
 public class ContactController implements Initializable{
 
 	 @FXML
@@ -28,21 +28,14 @@ public class ContactController implements Initializable{
 private Button back;
 
 private Parent fxml;
+//this function is called when the back button is clicked; the user is redirected to Home page
 @FXML
 void Back() {
-
-	
-	
 	AnchorPane.getScene().getWindow().hide();
 	Stage conversion= new Stage();
-	
-		
 	try {
-	
 	fxml= FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
-	
 	Scene scene = new Scene(fxml);
-	
 	conversion.setScene(scene);
 	conversion.show();
 	
