@@ -7,9 +7,9 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: white;" styleClass="white-pane-nophoto" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AudioController">
    <children>
-      <AnchorPane fx:id="AnchorPane" prefHeight="501.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="skyblue-pane-photo">
+      <AnchorPane fx:id="AnchorPane" prefHeight="501.0" prefWidth="700.0" styleClass="white-pane-nophoto">
          <children>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Digital Diagnostic Center is a private facility offering a state-of-the-art clinical laboratory analysis service, achieved through the adoption and use of modern instrumentation and the application of strict operational and organisational procedures." textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="is a private facility offering a state-of-the-art clinical laboratory analysis service, achieved through the adoption and use of modern instrumentation and the application of strict operational and organisational procedures." textAlignment="JUSTIFY" wrappingWidth="682.1367769241333">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
@@ -19,14 +19,19 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </Button>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nowadays, prevention is fundamental, and through one of our consultations you can have regular check-ups.The aim of our work is to contribute to improving the health of the community, and this is only made possible by the enhancement of clinical diagnostics and the support of new research techniques." textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nowadays, prevention is fundamental, and through one of our consultations you can have regular check-ups.The aim of our work is to contribute to improving the health of the community, and this is only made possible by the enhancement of clinical diagnostics and the support of new research techniques." textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
             </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Professionalism, reliability and competence are the hallmarks of our centre, whose aim is to offer the best service to its patients." textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
+            <Text fill="#280606" fontSmoothingType="LCD" layoutX="29.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
                <font>
                   <Font name="System Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Digital Diagnostic Center">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
                </font>
             </Text>
          </children></AnchorPane>

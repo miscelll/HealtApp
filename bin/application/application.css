@@ -33,6 +33,14 @@
 	-fx-background-color: #FFFFFF;
 }
 
+.white-pane-wave{
+	-fx-background-image: url("/images/digit.jpg");
+	
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-size:350 250;
+	-fx-background-position: center top;
+	-fx-background-color: #FFFFFF;
+}
 .skyblue-pane-photo{
 	-fx-background-image: url("/images/digit2.jpg");
 	-fx-background-repeat: no-repeat, no-repeat;
@@ -59,6 +67,13 @@
 	-fx-background-color: #316dc4;
 	-fx-background-radius: 5px;
 	-fx-text-fill: #FFFFFF;
+	
+}
+
+.white-btn{
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #000000;
 }
 
 .black-btn{

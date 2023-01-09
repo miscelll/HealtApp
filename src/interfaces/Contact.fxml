@@ -7,39 +7,39 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: white;" styleClass="white-pane-nophoto" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ContactController">
    <children>
-      <AnchorPane fx:id="AnchorPane" prefHeight="501.0" prefWidth="700.0" style="-fx-background-color: lightskyblue;" styleClass="skyblue-pane-photo">
+      <AnchorPane fx:id="AnchorPane" prefHeight="501.0" prefWidth="700.0" style="-fx-background-color: #ffffff00;" styleClass="white-pane-nophoto">
          <children>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit us at our laboratory in Tours                                                    " textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
-               <font>
-                  <Font name="System Bold Italic" size="18.0" />
-               </font>
-            </Text>
             <Button fx:id="back" layoutX="29.0" layoutY="451.0" mnemonicParsing="false" onAction="#Back" prefHeight="22.0" prefWidth="52.0" styleClass="blue-btn" stylesheets="@../application/application.css" text="Back" textFill="#7b7272">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
             </Button>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Diagnostic Center S.n.c.                                                                               Rue xxxx, 14437000 - ToursP.iva: 0xxxxx" textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Diagnostic Center S.n.c.                                                                               Rue xxxx, 14437000 - ToursP.iva: 0xxxxx" textAlignment="JUSTIFY" wrappingWidth="642.1366653442383">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
             </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="18.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Tel: 06xxxx                                                                                                              Fax: 06xxxxx                                                                                               digital.diagnostic@gmail.com : Mail                                                                 digital.diagnostic.pec@legalmail.it: PEC" textAlignment="JUSTIFY" wrappingWidth="634.8032913208008">
+            <Text fontSmoothingType="LCD" layoutX="18.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Tel: 06xxxx                                                                                                              Fax: 06xxxxx                                                                                               digital.diagnostic@gmail.com : Mail                                                                 digital.diagnostic.pec@legalmail.it: PEC" textAlignment="JUSTIFY" wrappingWidth="634.8032913208008">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
             </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Opening hours :Monday to Friday " textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Opening hours :Monday to Friday " textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
             </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="7.30 - 12.30 | 15.00 - 17.30" textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="7.30 - 12.30 | 15.00 - 17.30" textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
             </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Saturday by appointment only" textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skyblue-pane-photo" text="Saturday by appointment only" textAlignment="JUSTIFY" wrappingWidth="415.469970703125">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit us at our laboratory in Tours                                                    " textAlignment="JUSTIFY" wrappingWidth="541.4700088500977">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
